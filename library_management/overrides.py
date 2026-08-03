@@ -36,3 +36,21 @@ def clear_user_cache(login_manager):
     user = frappe.session.user
     current_time = now_datetime()
     print(f"LOGOUT | User: {user} | Time: {current_time}")
+
+
+
+
+def validate_custom_auth():
+    print("\n========== AUTH HOOK ==========")
+
+    token = frappe.get_request_header("X-Demo-Token")
+
+    print("Received Header:", token)
+
+    if token == "library123":
+        frappe.set_user("Administrator")
+        print("Authenticated as Administrator")
+
+    else:
+        print("No valid token")
+        print("Continuing as Guest")
