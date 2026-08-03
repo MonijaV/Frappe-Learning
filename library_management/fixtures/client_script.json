@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Library Member",
+  "enabled": 0,
+  "modified": "2026-07-30 14:45:59.740490",
+  "module": "Library Management",
+  "name": "Library Member Script",
+  "script": "frappe.ui.form.on(\"Library Member\", {\n    \n    refresh(frm) {\n        frappe.msgprint(\"Welcome to Library Member Form!\");\n        if (frm.is_new()) {\n            frappe.msgprint(\"Create a New Member\");\n        }\n    },\n    \n    full_name(frm) {\n        frm.set_value(\"full_name\", frm.doc.full_name.toUpperCase());\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Library Member",
+  "enabled": 0,
+  "modified": "2026-07-30 14:46:05.765624",
+  "module": null,
+  "name": "Library Member Script1",
+  "script": "frappe.listview_settings[\"Library Member\"] = {\n    onload(listview) {\n        frappe.show_alert({\n            message: \"Library Member List Loaded\",\n            indicator: \"green\"\n        });\n    },\n    onload(listview) {\n        listview.page.add_inner_button(\"Say Hello\", function () {\n            frappe.msgprint(\"Hello from List View!\");\n        });\n    },\n    onload(listview) {\n        listview.page.add_inner_button(\"Selected Count\", function () {\n            let selected = listview.get_checked_items();\n            frappe.msgprint(\n                \"Selected Members: \" + selected.length\n            );\n        });\n    },\n    refresh(listview) {\n        console.log(\"List Refreshed\");\n    }\n};",
+  "view": "List"
+ }
+]

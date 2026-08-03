@@ -256,3 +256,82 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+export_python_type_annotations = True
+#app_include_js = "custom_desk.bundle.js
+fixtures = [
+    "Client Script",
+    "Server Script",
+    "Web Form"
+]
+"""app_include_js = [
+    "/assets/library_management/js/global_script.js"
+]
+app_include_css = [
+    "/assets/library_management/css/global_style.css"
+]
+
+page_js = {
+    "permission-manager": "public/js/permission_manager.js"
+}
+
+doctype_js = {
+    "Library Member": "public/js/library_member.js"
+}
+
+doctype_list_js = {
+    "Library Member": "public/js/library_member_list.js"
+}
+
+website_route_rules = [
+    {"from_route": "/books", "to_route": "app"}
+]
+
+doc_events = {
+    "Library Member": {
+        "before_insert": "library_management.events.library_member.before_insert"
+    }
+}
+
+on_login = "library_management.events.auth.on_login"
+
+has_permission = {
+    "Library Member":
+        "library_management.permissions.library_member.has_permission"
+}
+
+doc_events = {
+    "ToDo": {
+        "validate": "library_management.api.custom_logic"
+    }
+}"""
+
+#home_page = "about-library"
+
+update_website_context = "library_management.website.update_context"
+
+"""website_route_rules = [
+    {"from_route": "/newdemo", "to_route": "demo"}
+]"""
+
+"""website_path_resolver = (
+    "library_management.website.resolve_path"
+)"""
+
+#website_catch_all = "not_found"
+
+"""extend_website_page_controller_context = (
+    "library_management.website.extend_page_context"
+)"""
+
+#web_include_js = "/assets/library_management/js/portal.js"
+
+#web_include_css = "/assets/library_management/css/portal.css"
+
+"""webform_include_js = {
+    "Book Issue": "public/js/book_issue.js"
+}
+
+webform_include_css = {
+    "Book Issue": "public/css/book_issue.css"
+}"""
+

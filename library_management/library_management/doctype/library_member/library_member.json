@@ -1,0 +1,195 @@
+{
+ "actions": [
+  {
+   "action": "article",
+   "action_type": "Route",
+   "label": "Membership"
+  },
+  {
+   "action": "hello_method",
+   "action_type": "Server Action",
+   "label": "Hello"
+  }
+ ],
+ "allow_auto_repeat": 1,
+ "allow_bulk_edit": 1,
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "color": "red",
+ "creation": "2026-07-14 18:16:16.383732",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "full_name",
+  "email_address",
+  "phone",
+  "address",
+  "favourite_books",
+  "view_memberships",
+  "check",
+  "naming_series",
+  "non_favourite_books"
+ ],
+ "fields": [
+  {
+   "default": "last",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Last Name",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Email Address",
+   "search_index": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Table",
+   "label": "Address",
+   "options": "Member Address"
+  },
+  {
+   "default": "first",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "First Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "favourite_books",
+   "fieldtype": "Table MultiSelect",
+   "label": "Favourite Books",
+   "options": "Favourite Book"
+  },
+  {
+   "fieldname": "view_memberships",
+   "fieldtype": "Button",
+   "label": "View Memberships"
+  },
+  {
+   "fieldname": "check",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Check",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LM-.##\nLGM-.##"
+  },
+  {
+   "fieldname": "non_favourite_books",
+   "fieldtype": "Data",
+   "label": "Non Favourite Books"
+  }
+ ],
+ "grid_page_length": 50,
+ "icon": "\ud83e\uddd1\u200d\ud83c\udfeb",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Membership",
+   "link_doctype": "Library Membership",
+   "link_fieldname": "library_member"
+  },
+  {
+   "group": "BookIssue",
+   "link_doctype": "Book Issue",
+   "link_fieldname": "library_member"
+  }
+ ],
+ "modified": "2026-07-29 14:13:46.192985",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Member",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Test User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "full_name,email_address,phone",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "first_name",
+ "sort_order": "ASC",
+ "states": [
+  {
+   "color": "Purple",
+   "title": "Active"
+  },
+  {
+   "color": "Orange",
+   "title": "Inactive"
+  }
+ ],
+ "title_field": "naming_series",
+ "track_changes": 1
+}

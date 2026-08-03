@@ -1,0 +1,1 @@
+alert("Portal JS loaded");

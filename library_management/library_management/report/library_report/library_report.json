@@ -1,0 +1,43 @@
+{
+ "add_total_row": 1,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2026-07-29 15:35:23.011674",
+ "disable_prepared_report_automation": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "mandatory": 0,
+   "options": "doc.full_name=\"Ashok T\"",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"Library Member\"],[\"first_name\",\"Library Member\"],[\"phone\",\"Library Member\"],[\"full_name\",\"Library Member\"],[\"custom_attendance\",\"Library Member\"],[\"state\",\"Member Address\"],[\"book\",\"Favourite Book\"]],\"order_by\":\"`tabLibrary Member`.`creation` desc\",\"page_length\":40,\"column_widths\":{\"name\":120,\"first_name\":120,\"phone\":120,\"full_name\":120,\"custom_attendance\":120,\"Member Address:state\":120,\"Favourite Book:book\":120},\"group_by\":null}",
+ "letter_head": null,
+ "modified": "2026-07-29 17:20:18.551872",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT full_name, phone\nFROM `tabLibrary Member`;",
+ "ref_doctype": "Library Member",
+ "report_name": "Library Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Test User"
+  }
+ ],
+ "timeout": 0
+}

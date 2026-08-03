@@ -1,0 +1,14 @@
+/* Change the top navigation bar */
+.navbar {
+    background-color: #6a0dad !important;
+}
+
+/* Change the page background */
+.layout-main-section {
+    background-color: #f5f0ff !important;
+}
+
+/* Make primary buttons rounded */
+.btn-primary {
+    border-radius: 12px !important;
+}

@@ -1,0 +1,11 @@
+body {
+    background: pink;
+}
+
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+.btn-primary {
+    background:blue;
+}
