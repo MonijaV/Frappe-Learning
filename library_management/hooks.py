@@ -292,8 +292,6 @@ doc_events = {
     }
 }
 
-on_login = "library_management.events.auth.on_login"
-
 has_permission = {
     "Library Member":
         "library_management.permissions.library_member.has_permission"
@@ -334,4 +332,10 @@ update_website_context = "library_management.website.update_context"
 webform_include_css = {
     "Book Issue": "public/css/book_issue.css"
 }"""
+
+on_login = "library_management.overrides.successful_login"
+
+on_session_creation = "library_management.overrides.allocate_free_credits"
+
+on_logout = "library_management.overrides.clear_user_cache"
 
