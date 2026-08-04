@@ -38,9 +38,7 @@ def clear_user_cache(login_manager):
     print(f"LOGOUT | User: {user} | Time: {current_time}")
 
 
-
-
-def validate_custom_auth():
+"""def validate_custom_auth():
     print("\n========== AUTH HOOK ==========")
 
     token = frappe.get_request_header("X-Demo-Token")
@@ -53,4 +51,4 @@ def validate_custom_auth():
 
     else:
         print("No valid token")
-        print("Continuing as Guest")
+        print("Continuing as Guest")"""

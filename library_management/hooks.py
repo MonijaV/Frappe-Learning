@@ -339,7 +339,10 @@ on_session_creation = "library_management.overrides.allocate_free_credits"
 
 on_logout = "library_management.overrides.clear_user_cache"
 
-auth_hooks = [
+"""auth_hooks = [
     "library_management.overrides.validate_custom_auth"
-]
+]"""
 
+has_permission = {
+    "Library Member": "library_management.permissions.library_member_permission"
+}

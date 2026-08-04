@@ -7,6 +7,28 @@ from frappe.model.document import Document
 
 
 class LibraryMember(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+		from library_management.library_management.doctype.favourite_book.favourite_book import FavouriteBook
+		from library_management.library_management.doctype.member_address.member_address import MemberAddress
+
+		address: DF.Table[MemberAddress]
+		check: DF.Literal["Active", "Inactive"]
+		email_address: DF.Data | None
+		favourite_books: DF.TableMultiSelect[FavouriteBook]
+		first_name: DF.Data
+		full_name: DF.Data | None
+		last_name: DF.Data | None
+		naming_series: DF.Literal["LM-.##", "LGM-.##"]
+		non_favourite_books: DF.Data | None
+		phone: DF.Data
+	# end: auto-generated types
+
 	pass
 
 	"""def before_insert(self):
