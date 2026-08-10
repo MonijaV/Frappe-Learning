@@ -394,8 +394,12 @@ extend_bootinfo = "library_management.boot.boot_session"
     "Address": "library_management.overrides.address.CustomAddress"
 }"""
 
-doctype_js = {
+"""doctype_js = {
     "ToDo": "public/js/todo.js",
+}"""
+
+override_whitelisted_methods = {
+    "frappe.client.get_count": "library_management.whitelisted.custom_get_count"
 }
 
 
