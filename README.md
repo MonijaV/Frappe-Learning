@@ -1,33 +1,27 @@
-### Library Management
+Frappe Assignments
 
-library management system
+Assignment 1 : bench-cli-production
 
-### Installation
+Drive Link:
+https://drive.google.com/file/d/1nIrg4BNEmuUyWN24SrpjiQhfsKxw2L_3/view?usp=drive_link
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+Assignment 2 : basics-asset-bundling 
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch version-16
-bench install-app library_management
-```
+Files:
 
-### Contributing
+*frappe/my-bench/apps/library_management/library_management/public/custom_desk.bundle.js
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+*frappe/my-bench/apps/library_management/library_management/hooks.py
 
-```bash
-cd apps/library_management
-pre-commit install
-```
+Drive Link:
+https://drive.google.com/file/d/1ht8IS6N-CuZj4ytsyswZPE2c-y8Sf41h/view?usp=drive_link
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+Assignment 3 : basics-python-api Assignment
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+Files:
 
-### License
+*frappe/my-bench/apps/library_management/library_management/library_management/doctype/test_document/test_document.py
 
-mit
+*frappe/my-bench/apps/library_management/library_management/api.py
+
+*frappe/my-bench/apps/library_management/library_management/hooks.py
