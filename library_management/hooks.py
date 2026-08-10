@@ -390,7 +390,13 @@ extend_bootinfo = "library_management.boot.boot_session"
     ]
 }"""
 
-override_doctype_class = {
+"""override_doctype_class = {
     "Address": "library_management.overrides.address.CustomAddress"
+}"""
+
+doctype_js = {
+    "ToDo": "public/js/todo.js",
 }
+
+
 
