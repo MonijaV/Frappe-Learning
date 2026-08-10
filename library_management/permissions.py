@@ -14,3 +14,17 @@ def library_member_permission(doc, user=None, permission_type=None):
             return False
 
     return True
+
+
+"""def library_member_query(user):
+    if not user:
+        user = frappe.session.user
+    # Test User -> Active members only
+    if user == "testuser@example.com":
+        return "`tabLibrary Member`.`check` = 'Active'"
+    # Reader -> Inactive members only
+    elif user == "reader@example.com":
+        return "`tabLibrary Member`.`check` = 'Inactive'"
+    # Everyone else (Administrator)
+    return """""
+

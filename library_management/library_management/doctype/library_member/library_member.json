@@ -15,7 +15,7 @@
  "allow_bulk_edit": 1,
  "allow_events_in_timeline": 1,
  "allow_rename": 1,
- "autoname": "naming_series:naming_series",
+ "autoname": "field:first_name",
  "color": "red",
  "creation": "2026-07-14 18:16:16.383732",
  "default_view": "List",
@@ -30,10 +30,9 @@
   "phone",
   "address",
   "favourite_books",
-  "view_memberships",
   "check",
   "naming_series",
-  "non_favourite_books"
+  "membership_end_date"
  ],
  "fields": [
   {
@@ -91,11 +90,6 @@
    "options": "Favourite Book"
   },
   {
-   "fieldname": "view_memberships",
-   "fieldtype": "Button",
-   "label": "View Memberships"
-  },
-  {
    "fieldname": "check",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -109,9 +103,9 @@
    "options": "LM-.##\nLGM-.##"
   },
   {
-   "fieldname": "non_favourite_books",
-   "fieldtype": "Data",
-   "label": "Non Favourite Books"
+   "fieldname": "membership_end_date",
+   "fieldtype": "Date",
+   "label": "Membership End Date"
   }
  ],
  "grid_page_length": 50,
@@ -129,11 +123,11 @@
    "link_fieldname": "library_member"
   }
  ],
- "modified": "2026-08-04 12:56:00.164582",
+ "modified": "2026-08-06 15:30:14.900297",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Member",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -190,6 +184,5 @@
    "title": "Inactive"
   }
  ],
- "title_field": "naming_series",
  "track_changes": 1
 }

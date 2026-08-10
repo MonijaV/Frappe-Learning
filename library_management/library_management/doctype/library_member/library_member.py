@@ -10,7 +10,7 @@ class LibraryMember(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
-	from typing import TYPE_CHECKING
+	"""from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
@@ -29,7 +29,7 @@ class LibraryMember(Document):
 		phone: DF.Data
 	# end: auto-generated types
 
-	pass
+	pass"""
 
 	"""def before_insert(self):
 		frappe.msgprint("before_insert runs only once like until the doc is submitted,not after that!!")

@@ -257,6 +257,7 @@ app_license = "mit"
 # ignore_translatable_strings_from = []
 
 export_python_type_annotations = True
+#Assignment
 #app_include_js = "custom_desk.bundle.js
 fixtures = [
     "Client Script",
@@ -296,7 +297,7 @@ has_permission = {
     "Library Member":
         "library_management.permissions.library_member.has_permission"
 }
-
+#Assignment
 doc_events = {
     "ToDo": {
         "validate": "library_management.api.custom_logic"
@@ -346,3 +347,50 @@ on_logout = "library_management.overrides.clear_user_cache"
 has_permission = {
     "Library Member": "library_management.permissions.library_member_permission"
 }
+
+before_migrate = "library_management.migrate.before_migrate"
+
+after_migrate = "library_management.migrate.after_migrate"
+
+"""ignore_links_on_delete = [
+    "Book Issue"
+]"""
+
+"""permission_query_conditions = {
+    "Library Member":
+        "library_management.permissions.library_member_query"
+}"""
+
+"""signup_form_template = "library_management/www/library-signup.html" """
+
+auto_cancel_exempted_doctypes = [
+    "submittable12"
+]
+
+scheduler_events = {
+    "all": [
+        "library_management.scheduled_tasks.scheduler_demo"
+    ]
+}
+
+jinja = {
+    "methods": [
+        "library_management.jinja.methods"
+    ],
+    "filters": [
+        "library_management.jinja.filters"
+    ]
+}
+
+extend_bootinfo = "library_management.boot.boot_session"
+
+"""extend_doctype_class = {
+    "Address": [
+        "library_management.extensions.address.AddressMixin"
+    ]
+}"""
+
+override_doctype_class = {
+    "Address": "library_management.overrides.address.CustomAddress"
+}
+
