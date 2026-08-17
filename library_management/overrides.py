@@ -52,3 +52,10 @@ def clear_user_cache(login_manager):
     else:
         print("No valid token")
         print("Continuing as Guest")"""
+
+
+def clear_website_cache(path=None):
+    if path:
+        print(f"WEBSITE CACHE CLEARED FOR: {path}")
+    else:
+        print("ALL WEBSITE CACHE CLEARED")

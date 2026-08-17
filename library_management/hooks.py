@@ -344,16 +344,16 @@ on_logout = "library_management.overrides.clear_user_cache"
     "library_management.overrides.validate_custom_auth"
 ]"""
 
-has_permission = {
+"""has_permission = {
     "Library Member": "library_management.permissions.library_member_permission"
-}
+}"""
 
 before_migrate = "library_management.migrate.before_migrate"
 
 after_migrate = "library_management.migrate.after_migrate"
 
 """ignore_links_on_delete = [
-    "Book Issue"
+    "Library Membership"
 ]"""
 
 """permission_query_conditions = {
@@ -363,26 +363,26 @@ after_migrate = "library_management.migrate.after_migrate"
 
 """signup_form_template = "library_management/www/library-signup.html" """
 
-auto_cancel_exempted_doctypes = [
+"""auto_cancel_exempted_doctypes = [
     "submittable12"
-]
+]"""
 
-scheduler_events = {
+"""scheduler_events = {
     "all": [
         "library_management.scheduled_tasks.scheduler_demo"
     ]
-}
+}"""
 
-jinja = {
+"""jinja = {
     "methods": [
         "library_management.jinja.methods"
     ],
     "filters": [
         "library_management.jinja.filters"
     ]
-}
+}"""
 
-extend_bootinfo = "library_management.boot.boot_session"
+#extend_bootinfo = "library_management.boot.boot_session"
 
 """extend_doctype_class = {
     "Address": [
@@ -398,9 +398,28 @@ extend_bootinfo = "library_management.boot.boot_session"
     "ToDo": "public/js/todo.js",
 }"""
 
-override_whitelisted_methods = {
+"""override_whitelisted_methods = {
     "frappe.client.get_count": "library_management.whitelisted.custom_get_count"
-}
+}"""
+
+"""additional_timeline_content = {
+    "ToDo": ["library_management.timeline.todo_timeline"]
+}"""
+
+#clear_cache = "library_management.cache.clear_cache"
+
+#website_clear_cache = "library_management.overrides.clear_website_cache"
+
+after_build = "library_management.build.after_build"
+
+before_tests = "library_management.tests.before_tests"
+
+get_sender_details = "library_management.overrides.email.get_sender_details"
+
+default_mail_footer = """<div>Sent via <b>ABC Library Management</b></div>"""
+
+
+
 
 
 
