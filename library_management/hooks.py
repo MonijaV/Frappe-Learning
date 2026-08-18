@@ -418,6 +418,12 @@ get_sender_details = "library_management.overrides.email.get_sender_details"
 
 default_mail_footer = """<div>Sent via <b>ABC Library Management</b></div>"""
 
+scheduler_events={
+    "daily":[
+        "library_management.tasks.daily_maintenance"
+    ]
+}
+
 
 
 
