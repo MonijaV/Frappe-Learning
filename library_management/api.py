@@ -87,26 +87,19 @@ import frappe
 from frappe.utils import now
 @frappe.whitelist()
 def get_recent_todos():
-    # 1. Securely fetch the 5 most recently created ToDos
     todos = frappe.get_list(
         "ToDo",
         fields=["name", "description", "owner"],
         order_by="creation desc",
         limit_page_length=5,
     )
-
-    # 2. Fetch owner's email using frappe.db.get_value()
     for todo in todos:
         todo["owner_email"] = frappe.db.get_value(
             "User",
             todo["owner"],
             "email"
         )
-
-    # 3. Get current server time
     timestamp = now()
-
-    # 4. Return the response
     return {
         "timestamp": timestamp,
         "records": todos
