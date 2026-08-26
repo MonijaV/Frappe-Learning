@@ -41,3 +41,11 @@ https://drive.google.com/file/d/1GofktcDlJf-Ch37l0m53VVeSxD4lXsMZ/view?usp=shari
 
 **Drive Link:**
 https://drive.google.com/file/d/1W9d-5kxtcfElq1ycu4_PuVjswGPueJUy/view?usp=sharing
+
+## Assignment 6: python-api-utilities Assignment
+
+**Files:**
+
+* `frappe/my-bench/apps/library_management/library_management/api.py`
+
+**Drive Link:**
