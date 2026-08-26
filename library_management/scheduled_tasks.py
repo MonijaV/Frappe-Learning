@@ -16,5 +16,4 @@ def test_configurable_scheduler():
     print("====================================")
     frappe.log_error(
         title="Configurable Scheduler Test",
-        message=f"Scheduler executed at {now_datetime()}"
-    )
+        message=f"Scheduler executed at {now_datetime()}")

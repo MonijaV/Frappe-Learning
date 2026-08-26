@@ -6,3 +6,31 @@
 
 // 	},
 // });
+
+
+//FORM EVENTS API
+
+// frappe.ui.form.on('Library Membership',{
+//     setup(frm){
+//         frm.set_query('library_member' ,() => {
+//             return{
+//                 filters:{
+//                     check:'Active'
+//                 }
+//             };
+//         });
+//     }
+// });
+
+
+// frappe.ui.form.on('Library Membership',{
+//     setup(frm){
+//         frm.set_query('library_member' ,() => {
+//             return{
+//                 filters:{
+//                     last_name:['in',['V','R']]
+//                 }
+//             };
+//         });
+//     }
+// });

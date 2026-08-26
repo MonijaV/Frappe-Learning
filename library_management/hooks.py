@@ -424,6 +424,10 @@ scheduler_events={
     ]
 }
 
+sqlite_search = [
+    "library_management.search.LibraryMemberSearch"
+]
+
 
 
 

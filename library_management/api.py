@@ -69,6 +69,14 @@ def api():
     return results
 
 
+from library_management.search import LibraryMemberSearch
+@frappe.whitelist()
+def search_library_members(query):
+
+    search = LibraryMemberSearch()
+
+    return search.search(query)
+
 
 
 

@@ -18,6 +18,7 @@ class LibraryMember(Document):
 		from library_management.library_management.doctype.member_address.member_address import MemberAddress
 
 		address: DF.Table[MemberAddress]
+		books_brought: DF.Data | None
 		check: DF.Literal["Active", "Inactive"]
 		email_address: DF.Data | None
 		favourite_books: DF.TableMultiSelect[FavouriteBook]
@@ -63,14 +64,18 @@ class LibraryMember(Document):
 	# 	frappe.msgprint("The document is inserted sucessfully")
 	# 	frappe.msgprint(f"Document {self.name} inserted successfully")
 		
-	def before_save(self):
-		old_doc = self.get_doc_before_save()
-		if old_doc:
-			if old_doc.check != self.check:
-				frappe.msgprint(f"Check changed from {old_doc.check} to {self.check}")
+	# def before_save(self):
+	# 	old_doc = self.get_doc_before_save()
+	# 	if old_doc:
+	# 		if old_doc.check != self.check:
+	# 			frappe.msgprint(f"Check changed from {old_doc.check} to {self.check}")
 
-	def validate(self):
-		return f"Hello {self.first_name}"
+	# def validate(self):
+	# 	return f"Hello {self.first_name}"
+
+	@frappe.whitelist()
+	def get_address_count(self):
+		return len(self.address)
 	
 
 
