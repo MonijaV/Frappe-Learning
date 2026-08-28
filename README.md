@@ -50,3 +50,13 @@ https://drive.google.com/file/d/1W9d-5kxtcfElq1ycu4_PuVjswGPueJUy/view?usp=shari
 
 **Drive Link:**
 https://drive.google.com/file/d/1eCUaIhFroinNzFkACClcunBUfEV2msnj/view?usp=sharing
+
+## Assignment 6: js frappecall Assignment
+
+**Files:**
+
+*`frappe/my-bench/apps/library_management/library_management/library_management/doctype/library_member/library_member.js`
+*`frappe/my-bench/apps/library_management/library_management/api.py`
+
+**Drive Link:**
+https://drive.google.com/file/d/1K_zRd0Mhx1Fjt4rg-4KPXCfQrPfM4g5L/view?usp=sharing
