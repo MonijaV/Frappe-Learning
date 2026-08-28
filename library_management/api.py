@@ -105,34 +105,46 @@ import frappe
 #         "records": todos
 #     }
 
+#REALTIME CHART API
+# @frappe.whitelist()
+# def send_chart_data():
+#     data = {
+#         "label": 1,
+#         "points": [10]
+#     }
+
+#     frappe.publish_realtime(
+#         "library_chart_update",
+#         data
+#     )
+
+#LOGGING
+# frappe.utils.logger.set_log_level("DEBUG")
+# logger = frappe.logger(
+#     "library_api",
+#     allow_site=True,
+#     file_count=10
+# )
+# @frappe.whitelist()
+# def test_logging():
+#     user = frappe.session.user
+#     logger.debug(f"DEBUG: {user} entered test_logging")
+#     logger.info(f"INFO: {user} called test_logging")
+#     logger.warning(f"WARNING: test warning for {user}")
+#     logger.error(f"ERROR: test error for {user}")
+#     return "Logging test completed"
+
+
+
+
 @frappe.whitelist()
-def send_chart_data():
-    data = {
-        "label": 1,
-        "points": [10]
-    }
+def create_task(task_subject):
+    task = frappe.new_doc("Task")
+    task.subject = task_subject
+    task.save()
 
-    frappe.publish_realtime(
-        "library_chart_update",
-        data
-    )
+    return task.name
 
-
-import frappe
-frappe.utils.logger.set_log_level("DEBUG")
-logger = frappe.logger(
-    "library_api",
-    allow_site=True,
-    file_count=10
-)
-@frappe.whitelist()
-def test_logging():
-    user = frappe.session.user
-    logger.debug(f"DEBUG: {user} entered test_logging")
-    logger.info(f"INFO: {user} called test_logging")
-    logger.warning(f"WARNING: test warning for {user}")
-    logger.error(f"ERROR: test error for {user}")
-    return "Logging test completed"
 
 
 
