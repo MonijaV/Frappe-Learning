@@ -84,26 +84,55 @@ import frappe
 
 
 # PYTHON API UTILITIES ASSIGNMENT
-from frappe.utils import now
+# from frappe.utils import now
+# @frappe.whitelist()
+# def get_recent_todos():
+#     todos = frappe.get_list(
+#         "ToDo",
+#         fields=["name", "description", "owner"],
+#         order_by="creation desc",
+#         limit_page_length=5,
+#     )
+#     for todo in todos:
+#         todo["owner_email"] = frappe.db.get_value(
+#             "User",
+#             todo["owner"],
+#             "email"
+#         )
+#     timestamp = now()
+#     return {
+#         "timestamp": timestamp,
+#         "records": todos
+#     }
+
 @frappe.whitelist()
-def get_recent_todos():
-    todos = frappe.get_list(
-        "ToDo",
-        fields=["name", "description", "owner"],
-        order_by="creation desc",
-        limit_page_length=5,
-    )
-    for todo in todos:
-        todo["owner_email"] = frappe.db.get_value(
-            "User",
-            todo["owner"],
-            "email"
-        )
-    timestamp = now()
-    return {
-        "timestamp": timestamp,
-        "records": todos
+def send_chart_data():
+    data = {
+        "label": 1,
+        "points": [10]
     }
+
+    frappe.publish_realtime(
+        "library_chart_update",
+        data
+    )
+
+
+import frappe
+frappe.utils.logger.set_log_level("DEBUG")
+logger = frappe.logger(
+    "library_api",
+    allow_site=True,
+    file_count=10
+)
+@frappe.whitelist()
+def test_logging():
+    user = frappe.session.user
+    logger.debug(f"DEBUG: {user} entered test_logging")
+    logger.info(f"INFO: {user} called test_logging")
+    logger.warning(f"WARNING: test warning for {user}")
+    logger.error(f"ERROR: test error for {user}")
+    return "Logging test completed"
 
 
 
