@@ -51,7 +51,7 @@ https://drive.google.com/file/d/1W9d-5kxtcfElq1ycu4_PuVjswGPueJUy/view?usp=shari
 **Drive Link:**
 https://drive.google.com/file/d/1eCUaIhFroinNzFkACClcunBUfEV2msnj/view?usp=sharing
 
-## Assignment 6: js frappecall Assignment
+## Assignment 7: js frappecall Assignment
 
 **Files:**
 
