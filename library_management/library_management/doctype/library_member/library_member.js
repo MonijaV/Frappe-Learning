@@ -122,38 +122,39 @@
 // });
 
 
-frappe.ui.form.on("Library Member", {
-    refresh(frm) {
-        frm.add_custom_button("Create Task", () => {
-            let dialog = new frappe.ui.Dialog({
-                title: "Create Task",
-                fields: [
-                    {
-                        label: "Task Subject",
-                        fieldname: "task_subject",
-                        fieldtype: "Data",
-                        reqd: 1
-                    }
-                ],
-                primary_action_label: "Create Task",
-                primary_action(values) {
-                    frappe.call({
-                        method: "library_management.api.create_task",
-                        args: {
-                            task_subject: values.task_subject
-                        },
-                        callback: function(r) {
-                            dialog.hide();
-                            frappe.msgprint({
-                                title: "Success",
-                                message: `Task ${r.message} created successfully.`,
-                                indicator: "green"
-                            });
-                        }
-                    });
-                }
-            });
-            dialog.show();
-        });
-    }
-});
+// JS FRAPPECALL ASSIGNMENT
+// frappe.ui.form.on("Library Member", {
+//     refresh(frm) {
+//         frm.add_custom_button("Create Task", () => {
+//             let dialog = new frappe.ui.Dialog({
+//                 title: "Create Task",
+//                 fields: [
+//                     {
+//                         label: "Task Subject",
+//                         fieldname: "task_subject",
+//                         fieldtype: "Data",
+//                         reqd: 1
+//                     }
+//                 ],
+//                 primary_action_label: "Create Task",
+//                 primary_action(values) {
+//                     frappe.call({
+//                         method: "library_management.api.create_task",
+//                         args: {
+//                             task_subject: values.task_subject
+//                         },
+//                         callback: function(r) {
+//                             dialog.hide();
+//                             frappe.msgprint({
+//                                 title: "Success",
+//                                 message: `Task ${r.message} created successfully.`,
+//                                 indicator: "green"
+//                             });
+//                         }
+//                     });
+//                 }
+//             });
+//             dialog.show();
+//         });
+//     }
+// });
