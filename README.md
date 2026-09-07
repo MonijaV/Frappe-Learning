@@ -60,3 +60,9 @@ https://drive.google.com/file/d/1eCUaIhFroinNzFkACClcunBUfEV2msnj/view?usp=shari
 
 **Drive Link:**
 https://drive.google.com/file/d/1K_zRd0Mhx1Fjt4rg-4KPXCfQrPfM4g5L/view?usp=sharing
+
+## Assignment 8: bench-cli-sitemanagement Assignment
+
+**Files:**
+
+*frappe/my-bench/apps/library_management/library_management/commands.py
