@@ -66,3 +66,10 @@ https://drive.google.com/file/d/1K_zRd0Mhx1Fjt4rg-4KPXCfQrPfM4g5L/view?usp=shari
 **Files:**
 
 * `frappe/my-bench/apps/library_management/library_management/commands.py`
+
+## Guides 1 Assignment
+
+**Files:**
+
+* `frappe/my-bench/apps/library_management/library_management/hooks.py`
+* `frappe/my-bench/apps/library_management/library_management/fixtures/client_script.json`
