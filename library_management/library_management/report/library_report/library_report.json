@@ -13,7 +13,7 @@
    "fieldtype": "Data",
    "label": "Full Name",
    "mandatory": 0,
-   "options": "doc.full_name=\"Ashok T\"",
+   "options": "doc.full_name=\"ASHOK M\"",
    "wildcard_filter": 0
   }
  ],
@@ -21,7 +21,7 @@
  "is_standard": "Yes",
  "json": "{\"filters\":[],\"fields\":[[\"name\",\"Library Member\"],[\"first_name\",\"Library Member\"],[\"phone\",\"Library Member\"],[\"full_name\",\"Library Member\"],[\"custom_attendance\",\"Library Member\"],[\"state\",\"Member Address\"],[\"book\",\"Favourite Book\"]],\"order_by\":\"`tabLibrary Member`.`creation` desc\",\"page_length\":40,\"column_widths\":{\"name\":120,\"first_name\":120,\"phone\":120,\"full_name\":120,\"custom_attendance\":120,\"Member Address:state\":120,\"Favourite Book:book\":120},\"group_by\":null}",
  "letter_head": null,
- "modified": "2026-07-29 17:20:18.551872",
+ "modified": "2026-09-10 10:39:08.293962",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Report",
